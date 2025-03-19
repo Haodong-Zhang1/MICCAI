@@ -1,0 +1,24 @@
+{
+    "aws": {
+        "instance_type": "g4dn.xlarge",
+        "region": "us-east-1",
+        "ami_id": "ami-0c7217cdde317cfec",
+        "key_name": "kits23-key",
+        "security_group": "kits23-sg",
+        "volume_size": 100,
+        "tags": {
+            "Name": "kits23-training",
+            "Project": "KiTS23"
+        }
+    },
+    "training": {
+        "data_dir": "/home/ubuntu/kits23_data",
+        "output_dir": "/home/ubuntu/kits23_output",
+        "batch_size": 4,
+        "num_workers": 4,
+        "mixed_precision": true,
+        "max_epochs": 300,
+        "learning_rate": 1e-4,
+        "weight_decay": 1e-5
+    }
+} 

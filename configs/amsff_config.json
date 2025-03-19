@@ -1,0 +1,34 @@
+{
+    "model": {
+        "in_channels": 1,
+        "num_classes": 3,
+        "initial_channels": 16,
+        "depth": 3,
+        "growth_factor": 1.5,
+        "max_channels": 160,
+        "use_depthwise_separable": true
+    },
+    "training": {
+        "batch_size": 1,
+        "learning_rate": 1e-4,
+        "max_epochs": 10,
+        "weight_decay": 1e-5,
+        "lr_scheduler": "cosine",
+        "patience": 5,
+        "mixed_precision": false,
+        "gradient_clipping": 1.0
+    },
+    "efficiency": {
+        "use_quantization": false,
+        "target_device": "cpu",
+        "batch_size": 1,
+        "num_workers": 2,
+        "pin_memory": true
+    },
+    "monitoring": {
+        "log_interval": 10,
+        "save_interval": 2,
+        "performance_monitoring": true,
+        "resource_tracking": true
+    }
+} 
